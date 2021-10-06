@@ -1,5 +1,3 @@
-rm(list=ls())
-
 # kita akan buat fungsinya
 # function di R, 3 elemen:
   # 1. Input: boleh ada, boleh tidak
