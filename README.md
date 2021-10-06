@@ -2,11 +2,13 @@
 
 Ini adalah _repository_ berisi _supporting scripts_ dan _files_ yang dibutuhkan ___Nutrifooders___ dalam mengikuti _training_ __R__ di _Nutriversity_.
 
+# Penjelasan _Folders_ dan Isinya
+
 ## `belajar function`
 
-Belajar bagaimana membuat _function_ untuk menghitung `bmi` dari _input_ berupa berat badan dan tinggi badan.
+Pada _folder_ ini kalian akan belajar bagaimana membuat berbagai _function_ sederhana di __R__.
 
-## Epilog
+# Epilog
 
 Salam.
 
