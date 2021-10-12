@@ -6,7 +6,7 @@ Pada _folder_ ini kalian akan menemukan tiga __R__ _functions_ yang telah saya c
 1. `hitung_bmi_v2()`
 1. `hitung_bmi_v3()`
 
-Selamat mempelajari dan mengeksplorasi.
+Ketiga _functions_ di atas ada pada file `bmi.R`. Selamat mempelajari dan mengeksplorasi.
 
 Salam.
 
