@@ -8,6 +8,10 @@ Ini adalah _repository_ berisi _supporting scripts_ dan _files_ yang dibutuhkan 
 
 Pada _folder_ ini kalian akan belajar bagaimana membuat berbagai _function_ sederhana di __R__.
 
+## `belajar looping`
+
+Pada _folder_ ini kalian akan belajar bagaimana membuat proses _looping_ dengan `for()` dan `while()`.
+
 # Epilog
 
 Salam.
