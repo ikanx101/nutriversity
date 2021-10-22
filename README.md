@@ -12,6 +12,10 @@ Pada _folder_ ini kalian akan belajar bagaimana membuat berbagai _function_ sede
 
 Pada _folder_ ini kalian akan belajar bagaimana membuat proses _looping_ dengan `for()` dan `while()`.
 
+## `import Excel dan prinsip tidy`
+
+Pada _folder_ ini kalian akan belajar bagaimana _import file_ berformat `.xlsx` ke dalam __R__ _environment_ lalu kita akan lakukan _data carpentry_ sederhana menggunakan operator _pipe_ alias `%>%`.
+
 # Epilog
 
 Salam.
