@@ -1,0 +1,29 @@
+---
+title: Uji Coba
+author: Ikang
+output: 
+ - pdf_document
+---
+
+```{r,include=FALSE}
+library(dplyr)
+library(ggplot2)
+```
+
+# Halo
+
+```{r}
+mtcars
+```
+
+## Membuat grafik
+
+```{r}
+x = 1:10
+y = x^2 - 4*x
+
+data.frame(x,y) %>%
+  ggplot(aes(x,y)) +
+  geom_line()
+
+```
