@@ -1,0 +1,45 @@
+---
+title: "Analisa Data MTCARS"
+subtitle: "Contoh Training Nutriversity"
+author: "Mohammad Rizka Fadhli"
+date: "29 Oktober 2021"
+output: 
+  ioslides_presentation:
+    widescreen: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+rm(list=ls())
+library(dplyr)
+library(ggplot2)
+```
+
+# Pendahuluan
+
+## Data `mtcars`
+
+Berikut adalah data `mtcars` yang digunakan:
+
+```{r}
+mtcars %>% 
+  DT::datatable(options = list(pageLength = 5)) 
+```
+
+## Korelasi Antara `mpg` dengan `hp`
+
+```{r,echo=FALSE,fig.retina=10,fig.align='center',message=FALSE,warning=FALSE}
+mtcars %>% 
+  ggplot(aes(x = mpg,y = hp)) +
+  geom_point(shape = 3,shapecolor = "steelblue") +
+  geom_smooth(method = "loess") +
+  labs(title = "Grafik Antara mpg vs hp",
+       subtitle = "Untuk training Nutriversity",
+       caption = "Dibuat dengan R",
+       x = "Miles per Gallon",
+       y = "Horsepower") +
+  theme_minimal()
+```
+
+
+
