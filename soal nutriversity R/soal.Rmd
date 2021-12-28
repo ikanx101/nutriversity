@@ -1,0 +1,177 @@
+---
+title: "SOAL LATIHAN"
+subtitle: "Training R Nutrifood"
+author: |
+  | Ikang Fadhli
+  | Market Research Nutrifood
+date: "`r format(Sys.time(), '%d %B %Y')`"
+fontsize: 12pt
+linestretch: 1
+colorlinks: true
+output:
+  pdf_document:
+   number_section: false
+   toc: false
+   highlight: tango
+   dev: png
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+setwd("~/nutriversity/soal nutriversity R")
+rm(list=ls())
+data_soal = read.csv("https://raw.githubusercontent.com/ikanx101/Data-Science-101/master/Materi%20Minggu%200/raw%20data.csv")
+```
+
+# KETERANGAN
+
+Untuk menjawab `10` soal _multiple choices_, kalian perlu men-_download_ _dataset_ yang ada dan mengolahnya terlebih dahulu.
+
+## DATASET
+
+_Dataset_ bisa diunduh di [sini](https://raw.githubusercontent.com/ikanx101/Data-Science-101/master/Materi%20Minggu%200/raw%20data.csv) ya Yola. Formatnya `.csv` dan disimpan dalam format tersebut.
+
+```{r,include=FALSE}
+library(dplyr)
+library(tidyr)
+library(reshape2)
+
+data_clean = 
+  data_soal %>% 
+  mutate(harga = gsub("[A-z]|\\.","",harga),
+         harga = as.numeric(harga),
+         terjual = gsub("[A-z]|\\.","",terjual),
+         terjual = as.numeric(terjual))
+
+d1 = 
+  data_clean %>%
+  group_by(nama,seller) %>% 
+  distinct() %>% 
+  group_by(seller) %>% 
+  tally() %>% 
+  ungroup() %>% 
+  arrange(n)
+
+data_clean %>% 
+  mutate(omset = terjual * harga) %>% 
+  group_by(seller) %>% 
+  summarise(omset = sum(omset)) %>% 
+  ungroup() %>% 
+  arrange(desc(omset)) %>% 
+  merge(d1) %>% 
+  mutate(ratio = omset / n) %>% 
+  arrange(desc(n))
+
+```
+
+## SOAL
+
+Pilihan jawaban yang saya __bold__ adalah jawaban yang benar _ya_.
+
+\newpage
+
+### Instruksi untuk Peserta
+
+Berikut adalah data jualan produk-produk _olive oil_ dari suatu _marketplace_. Setiap baris menandakan masing-masing produk yang dijual. Rekan-rekan silakan gunakan _libraries_ `dplyr`, `tidyr`, dan `reshape2` untuk menyelesaikan soal-soal berikut.
+
+### Soal 1
+
+Berapa harga maksimum dari produk _olive oil_ di _marketplace_ tersebut?
+
+- __906000__
+- 825000
+- 800000
+- 908000
+- 990000
+
+### Soal 2
+
+Berapa volume _olive oil_ yang memiliki harga termahal tersebut?
+
+- 6 liter
+- __5 liter__
+- 4 liter
+- 3 liter
+- 2 liter
+
+### Soal 3
+
+_Seller_ mana yang memiliki total `produk terjual` __kedua paling tinggi__?
+
+- Whiz World
+- Food Republic
+- __TokoSurabaya__
+- Nutrimart
+- Lapak Barokah
+
+\newpage
+
+### Soal 4
+
+_Seller_ mana yang memiliki `unique listed product` terbanyak dari data tersebut?
+
+- FingerLand
+- MOMOGO ID
+- __BestCMart__
+- Food Republic
+- HouseHerbal
+
+### Soal 5
+
+Berapa banyak `unique listed product` dari _seller_ tersebut (jawaban di soal 4)?
+
+- 127
+- 126
+- 200
+- __18__
+- 19
+
+### Soal 6
+
+Jika `omset` saya definisikan sebagai `terjual * harga`, berapa total omset _olive oil_ merek `Bertolli` pada tanggal `2020-09-07`?
+
+- 3401704375
+- 3192602650
+- 3378031150
+- 3212845925
+- __3212833925__
+
+### Soal 7
+
+Berapa banyak _olive oil_ merek `Borges` yang `terjual` pada tanggal `2020-09-04`?
+
+- 13063
+- 13064
+- __13065__
+- 13066
+- 13067
+
+### Soal 8
+
+Pada tanggal berapa total `omset` _olive oil_ terendah?
+
+- 2020-09-07
+- __2020-09-09__
+- 2020-09-10
+- 2020-09-11
+- 2020-09-14	
+
+### Soal 9
+
+Median adalah nilai tengah suatu data yang telah diurutkan dari yang terkecil hingga yang terbesar. Ada berapa _seller_ yang memiliki nilai `median == 11`?
+
+- 1
+- __2__
+- 3
+- 4
+- 5
+
+### Soal 10
+
+Jika didefinisikan `ratio = total omset seller / banyak unique listed product`. _Seller_ mana yang memiliki `ratio` tertinggi?
+
+- FingerLand
+- BestCMart
+- Food Republic
+- __Java Soap__
+- Alif Herbal
