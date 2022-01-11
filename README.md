@@ -16,6 +16,10 @@ Pada _folder_ ini kalian akan belajar bagaimana membuat proses _looping_ dengan 
 
 Pada _folder_ ini kalian akan belajar bagaimana _import file_ berformat `.xlsx` ke dalam __R__ _environment_ lalu kita akan lakukan _data carpentry_ sederhana menggunakan operator _pipe_ alias `%>%`.
 
+## `publishing in R`
+
+Pada _folder_ ini kalian akan menemukan contoh _report_ dari salah satu format pada __R__ _Markdown__.
+
 # Epilog
 
 Salam.
