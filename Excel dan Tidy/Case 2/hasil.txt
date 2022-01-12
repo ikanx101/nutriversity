@@ -1,0 +1,20 @@
+[[1]]
+
+Call:
+lm(formula = gear ~ ., data = df)
+
+Coefficients:
+(Intercept)         carb          mpg  
+   3.817572     0.143092     0.006099  
+
+
+[[2]]
+
+Call:
+lm(formula = gear ~ ., data = df)
+
+Coefficients:
+(Intercept)         carb          mpg  
+     0.3337       0.3055       0.1190  
+
+
