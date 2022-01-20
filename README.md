@@ -20,6 +20,12 @@ Pada _folder_ ini kalian akan belajar bagaimana _import file_ berformat `.xlsx` 
 
 Pada _folder_ ini kalian akan menemukan contoh _report_ dari salah satu format pada __R__ _Markdown__.
 
+# _Discord_
+
+Gabung grup _Discord_ __R__ x __Nutrifood__ yuk:
+
+https://discord.gg/FwTXcpGU9e
+
 # Epilog
 
 Salam.
